@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.11" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.13"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="iOS 13.0 system colors" minToolsVersion="11.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sentiment Analysis-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="SentimentViewController" customModule="Text_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a sentence here" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="QQz-vm-1ui">
+                                <rect key="frame" x="24" y="164" width="366" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKH-S6-gsl" customClass="CustomButton" customModule="Text_" customModuleProvider="target">
+                                <rect key="frame" x="132" y="423" width="150" height="50"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="RFm-g0-8Hp"/>
+                                    <constraint firstAttribute="height" constant="50" id="roB-rm-Ru0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <color key="tintColor" cocoaTouchSystemColor="secondarySystemBackgroundColor"/>
+                                <state key="normal" title="Analyze"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="analyzeText" destination="9pv-A4-QxB" eventType="touchUpInside" id="mZo-Kh-beK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="QQz-vm-1ui" secondAttribute="trailing" constant="24" id="Ohv-yV-Je8"/>
+                            <constraint firstItem="EKH-S6-gsl" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="afc-UZ-qG8"/>
+                            <constraint firstItem="EKH-S6-gsl" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="cSu-y3-q9a"/>
+                            <constraint firstItem="QQz-vm-1ui" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="24" id="cbk-Tw-2Lg"/>
+                            <constraint firstItem="QQz-vm-1ui" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="24" id="kks-MB-s97"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sentiment Analysis" id="i9S-2Y-kaD"/>
+                    <connections>
+                        <outlet property="analyzeButton" destination="EKH-S6-gsl" id="zKO-qs-us2"/>
+                        <outlet property="messageTextField" destination="QQz-vm-1ui" id="svL-n2-FbX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1659.4202898550725" y="-320.08928571428572"/>
+        </scene>
+        <!--Shopping Suggestions-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="SuggestionViewController" customModule="Text_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type what you're looking for" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PsQ-jg-cBq">
+                                <rect key="frame" x="24" y="164" width="366" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBw-pY-Ljf" customClass="CustomButton" customModule="Text_" customModuleProvider="target">
+                                <rect key="frame" x="107" y="214" width="200" height="50"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Lzl-TI-6iT"/>
+                                    <constraint firstAttribute="height" constant="50" id="SW5-Uk-8Ag"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <color key="tintColor" cocoaTouchSystemColor="secondarySystemBackgroundColor"/>
+                                <state key="normal" title="Suggest!"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="suggest:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Uae-I6-RrC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You may be interested in:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXT-Kf-eeV">
+                                <rect key="frame" x="111" y="438" width="192.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="IXT-Kf-eeV" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" id="2r4-Rs-hNv"/>
+                            <constraint firstItem="vBw-pY-Ljf" firstAttribute="top" secondItem="PsQ-jg-cBq" secondAttribute="bottom" constant="16" id="Bu9-3i-esX"/>
+                            <constraint firstItem="IXT-Kf-eeV" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="W6x-ZJ-2kJ"/>
+                            <constraint firstItem="PsQ-jg-cBq" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="24" id="YQj-DI-I6d"/>
+                            <constraint firstItem="PsQ-jg-cBq" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="24" id="b7C-Qw-NSH"/>
+                            <constraint firstItem="vBw-pY-Ljf" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="sv3-jG-UJG"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="PsQ-jg-cBq" secondAttribute="trailing" constant="24" id="xaq-Mu-D9e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Shopping Suggestions" id="g2o-Mj-lGd"/>
+                    <connections>
+                        <outlet property="itemTextField" destination="PsQ-jg-cBq" id="adk-zE-Vfw"/>
+                        <outlet property="suggestButton" destination="vBw-pY-Ljf" id="Yjf-Cd-fbw"/>
+                        <outlet property="suggestionLabel" destination="IXT-Kf-eeV" id="oud-2F-EFc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1659.4202898550725" y="359.59821428571428"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ftd-2l-a1v" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="BTs-XP-frE" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Sentiment-->
+        <scene sceneID="s45-jD-ejj">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pcm-bp-CTg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ftd-2l-a1v" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Sentiment" image="text.bubble.fill" catalog="system" id="acW-dT-cKf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Tpt-Wb-13S">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="Wch-6B-vRH"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="749.27536231884062" y="-320.08928571428572"/>
+        </scene>
+        <!--Suggestions-->
+        <scene sceneID="FBb-Kp-3ax">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BTs-XP-frE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Suggestions" image="creditcard.fill" catalog="system" id="cPa-gy-q4n"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="29E-cx-tRL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="VS3-ix-5ok"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ep-Tb-diV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.27536231884062" y="359.59821428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="creditcard.fill" catalog="system" width="64" height="46"/>
+        <image name="text.bubble.fill" catalog="system" width="64" height="54"/>
+    </resources>
+</document>
